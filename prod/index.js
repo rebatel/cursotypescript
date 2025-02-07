@@ -1,8 +1,5 @@
 "use strict";
-function add(num1, num2) {
-    return num1 + num2;
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-function result(price) {
-    console.log('The result is ' + price);
-}
-result(add(6, 3));
+generateError('The application crashed', 500);

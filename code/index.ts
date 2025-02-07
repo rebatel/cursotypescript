@@ -1,10 +1,6 @@
 
-function add(num1: number, num2: number): number {
-    return num1 + num2
+function generateError(message: string, code: number): never {
+    throw { message: message, errorCode: code }
 }
 
-function result(price: number) {
-    console.log('The result is ' + price)
-}
-
-result(add(6, 3))
+console.log('The application crashed', 500)
