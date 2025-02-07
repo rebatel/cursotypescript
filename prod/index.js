@@ -2,5 +2,7 @@
 function add(num1, num2) {
     return num1 + num2;
 }
-let result = add(5, 10);
-console.log(result); // 15   // 5 + 10 = 15  
+function result(price) {
+    console.log('The result is ' + price);
+}
+result(add(6, 3));
