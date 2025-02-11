@@ -1,16 +1,19 @@
-function userImput(input1: number| string, input2: number| string){
-    let result
-    if (typeof input1 === "number" && typeof input2 === 'number') {
-        result = input1 + input2
-    }
-    else {
-        result = input1.toString() + input2.toString()
-    }
-    return result
+type User = {
+    firstName: string
+    age: number
 }
 
-const combinePrices = userImput(10, 20)
-console.log(combinePrices)
 
-const combineName= userImput('Apple', 'Avocado')
-console.log(combineName)
+type jobRole = {
+    id: number
+    role: string
+}
+
+type employee = User & jobRole
+
+const e1: employee = {
+    firstName: "Renato",
+    age: 44,
+    id: 221,
+    role: "Admin"
+}
