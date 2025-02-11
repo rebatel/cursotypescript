@@ -1,4 +1,4 @@
 "use strict";
-let pie;
-pie = 'blueberry';
-console.log(`I like to eat ${pie}-flavored pie.`);
+// Day 3 - Exercise 3
+let isDouglas = false;
+console.log(`${isDouglas ? 'Oh, Hi Douglas' : 'Who are you?'}`);

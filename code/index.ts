@@ -1,4 +1,6 @@
-let pie: string
-pie = 'blueberry'
+// Day 3 - Exercise 3
 
-console.log(`I like to eat ${pie}-flavored pie.`)
+let isDouglas: boolean = false
+
+console.log(`${isDouglas ? 'Oh, Hi Douglas' : 'Who are you?'}`)
+
