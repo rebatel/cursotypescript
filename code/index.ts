@@ -1,6 +1,4 @@
-// Day 3 - Exercise 1
+let pie: string
+pie = 'blueberry'
 
-let pi = 3.14159;
-let tau = pi * 2;
-
-console.log(`${tau} is ${pi} times two.`);
+console.log(`I like to eat ${pie}-flavored pie.`)
