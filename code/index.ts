@@ -1,19 +1,6 @@
-type User = {
-    firstName: string
-    age: number
-}
+// Day 3 - Exercise 1
 
+let pi = 3.14159;
+let tau = pi * 2;
 
-type jobRole = {
-    id: number
-    role: string
-}
-
-type employee = User & jobRole
-
-const e1: employee = {
-    firstName: "Renato",
-    age: 44,
-    id: 221,
-    role: "Admin"
-}
+console.log(`${tau} is ${pi} times two.`);
