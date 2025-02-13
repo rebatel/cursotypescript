@@ -1,3 +1,3 @@
 
-let code: number = 30
+let code: number = 60
 console.log(code)
