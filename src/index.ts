@@ -1,20 +1,30 @@
-class Users {
-    name: string;
-    balance: number;
-
-    constructor(n: string, b: number){
-        this.name = n;
-        this.balance = b;
+interface CartItem {
+    id: number;
+    title: string;
+    variantId: number;
+  }
+  
+  function addToCart(item: CartItem) {
+    console.log(`Adding "${item.title}" to cart.`);
+  }
+  
+  addToCart({ id: 1, title: 'shoes', variantId: 123 }); // Agora requer variantId
+  addToCart({ id: 2, title: 'Shirt', variantId: 456 }); // Exemplo com outro item
+  
+  // Se você quiser lidar com a possibilidade de variantId ser opcional:
+  
+  interface CartItemOptionalVariant {
+    id: number;
+    title: string;
+    variantId?: number; // O ponto de interrogação torna variantId opcional
+  }
+  
+  function addToCartOptional(item: CartItemOptionalVariant) {
+    console.log(`Adding "${item.title}" to cart.`);
+    if (item.variantId) {
+      console.log(`Variant ID: ${item.variantId}`);
     }
-    addMoney(amount: number){
-        this.balance += amount;
-    }
-
-}
-
-const user1 = new Users("Renato", 10)
-user1.addMoney(100)
-const user2 = new Users("Amanda", 20)
-user2.addMoney(100)
-console.log(user1);
-console.log(user2);
+  }
+  
+  addToCartOptional({ id: 1, title: 'shoes' }); // OK, variantId opcional
+  addToCartOptional({ id: 2, title: 'Shirt', variantId: 789 }); // OK, variantId presente

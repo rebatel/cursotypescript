@@ -1,16 +1,14 @@
 "use strict";
-class Users {
-    constructor(n, b) {
-        this.name = n;
-        this.balance = b;
-    }
-    addMoney(amount) {
-        this.balance += amount;
+function addToCart(item) {
+    console.log(`Adding "${item.title}" to cart.`);
+}
+addToCart({ id: 1, title: 'shoes', variantId: 123 });
+addToCart({ id: 2, title: 'Shirt', variantId: 456 });
+function addToCartOptional(item) {
+    console.log(`Adding "${item.title}" to cart.`);
+    if (item.variantId) {
+        console.log(`Variant ID: ${item.variantId}`);
     }
 }
-const user1 = new Users("Renato", 10);
-user1.addMoney(100);
-const user2 = new Users("Amanda", 20);
-user2.addMoney(100);
-console.log(user1);
-console.log(user2);
+addToCartOptional({ id: 1, title: 'shoes' });
+addToCartOptional({ id: 2, title: 'Shirt', variantId: 789 });
