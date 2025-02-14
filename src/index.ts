@@ -1,30 +1,14 @@
-interface CartItem {
-    id: number;
-    title: string;
-    variantId: number;
+interface IPerson {
+    name: string;
+    age: number;
   }
   
-  function addToCart(item: CartItem) {
-    console.log(`Adding "${item.title}" to cart.`);
+  class Person implements IPerson {  // A classe Person implementa a interface IPerson
+    constructor(public name: string, public age: number) {}
   }
   
-  addToCart({ id: 1, title: 'shoes', variantId: 123 }); // Agora requer variantId
-  addToCart({ id: 2, title: 'Shirt', variantId: 456 }); // Exemplo com outro item
+  const jane: IPerson = new Person('Jane', 31); // 'jane' é tipada com IPerson
+  const john: IPerson = {name: "John", age: 42}; // Também podemos usar diretamente
   
-  // Se você quiser lidar com a possibilidade de variantId ser opcional:
-  
-  interface CartItemOptionalVariant {
-    id: number;
-    title: string;
-    variantId?: number; // O ponto de interrogação torna variantId opcional
-  }
-  
-  function addToCartOptional(item: CartItemOptionalVariant) {
-    console.log(`Adding "${item.title}" to cart.`);
-    if (item.variantId) {
-      console.log(`Variant ID: ${item.variantId}`);
-    }
-  }
-  
-  addToCartOptional({ id: 1, title: 'shoes' }); // OK, variantId opcional
-  addToCartOptional({ id: 2, title: 'Shirt', variantId: 789 }); // OK, variantId presente
+  console.log(`${jane.name} is ${jane.age} years old.`);
+  console.log(`${john.name} is ${john.age} years old.`);
