@@ -1,11 +1,8 @@
 "use strict";
-class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
+class MC {
+    greet(event = 'party') {
+        return `Welcome to the ${event}`;
     }
 }
-const jane = new Person('Jane', 31);
-const john = { name: "John", age: 42 };
-console.log(`${jane.name} is ${jane.age} years old.`);
-console.log(`${john.name} is ${john.age} years old.`);
+const mc = new MC();
+console.log(mc.greet('show'));

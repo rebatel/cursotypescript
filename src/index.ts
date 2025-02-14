@@ -1,5 +1,5 @@
 class MC {
-    greet(event = 'party') {
+    greet(event: string = 'party'): string {
       return `Welcome to the ${event}`;
     }
   }
