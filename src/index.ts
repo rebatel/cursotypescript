@@ -1,17 +1,14 @@
-interface UserSchema {
-    id: number
-    name: string
+
+class Movie {
+    id: number;
+    name: string;
+
+    constructor(id: number, name: string,) {
+        this.id = id;
+        this.name = name;
+    }
 }
 
-class User implements UserSchema {
-    constructor(public name: string, public id: number) {}
-}
-
-const user = new User('Dog', 1)
-
-console.log(user.id)
-
-user.name = 'Harold' // pode mudar
-user.id = 5 // nao pode mudar
-
-console.log(`User:`, user)
+let movie1 = new Movie(1, "Forrest Gump")
+movie1.id = 5
+console.log(movie1);

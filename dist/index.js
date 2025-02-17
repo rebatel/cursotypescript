@@ -1,9 +1,9 @@
 "use strict";
-class Employee {
-    constructor(title, salary) {
-        this.title = title;
-        this.salary = salary;
+class Movie {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
     }
 }
-const employee = new Employee('Engineer', 100000);
-console.log(`The new employee's title is ${employee.title} and they earn $ ${employee.salary}.`);
+let movie1 = new Movie(1, "Forrest Gump");
+console.log(movie1);
